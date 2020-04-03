@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot?55761174');
+    src: url('../font/fontello.eot?55761174#iefix') format('embedded-opentype'),
+        url('../font/fontello.woff?55761174') format('woff'),
+        url('../font/fontello.ttf?55761174') format('truetype'),
+        url('../font/fontello.svg?55761174#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+   
+.icon
+{
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+}
+
+@keyframes arrowMore {
+    0% {margin-top: -15px;}
+    75% {margin-top: -5px;}
+    100% {margin-top: -15px;}
+}
+
+body {
+    margin: 0 !important;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #131414;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, .9);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    margin: 0 0 80px 0;
+}
+
+header div#more {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: calc(100% - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+header div#word {
+    height: 5.5rem;
+    font-size: 4rem;
+    font-weight: 300;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+header div#word div#wordInside {
+    float: left;
+    min-width: 100px;
+}
+
+header div#more h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+header div#more i {
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    animation: arrowMore 1s infinite;
+    font-size: 40px;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: #181818;*/
+    z-index: 99999;
+}
+
+nav div.container {
+    width: 1200px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav div.container div.logo {
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+nav div.container div.menu {
+    min-width: 10px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+nav div.container div.menu div.option {
+    min-width: 10px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 600;
+    padding: 0 15px 0 15px;
+    font-size: .9rem;
+    cursor: pointer;
+    font-weight: 400;
+    transition: color .2s ease;
+}
+
+nav div.container div.menu div.option:hover {
+    color: #3498db;
+}
+
+section#aboutme {
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#aboutme div#container {
+    width: 1200px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+section#aboutme div#container img {
+    width: 450px;
+    height: 450px;
+}
+
+section#aboutme div#container div#information {
+    width: 55%;
+    height: 450px;
+}
+
+section#aboutme div#container div#information h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+}
+
+section#aboutme div#container div#information div.border {
+    margin: 10px 0 30px 0;
+    width: 420px;
+    height: 1px;
+    background-image:  linear-gradient(90deg, #3498db 15%, rgba(255, 255, 255, .1) 0%);
+}
+
+section#aboutme div#container div#information h2 {
+    color: rgba(255, 255, 255, .6);
+    font-size: .95rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+section#aboutme div#container div#information div#socialmedia {
+    margin: 20px 0 0 0;
+    min-width: 28px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+}
+
+section#aboutme div#container div#information div#socialmedia a.media {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 0 10px 0 0;
+    text-align: center;
+    line-height: 26px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border .3s ease, background-color .3s ease;
+}
+
+section#aboutme div#container div#information div#socialmedia a.media i {
+    font-size: 16px;
+}
+
+section#aboutme div#container div#information div#socialmedia a.media:last-child {
+    margin: 0 0 0 0;
+}
+
+section#aboutme div#container div#information div#socialmedia a.media:hover {
+    background-color: #3498db;
+    border: 1px solid #3498db;
+}
+
+section#aboutme div#container div#information div#buttons {
+    margin: 40px 0 0 0;
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+}
+
+section#aboutme div#container div#information div#buttons a#contact {
+    width: 120px;
+    height: 34px;
+    border: 1px solid #3498db;
+    background-color: #3498db;
+    text-align: center;
+    line-height: 34px;
+    font-size: .8rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 5px 0 0;
+    transition: color .3s ease, background-color .3s ease;
+    cursor: pointer;
+}
+
+section#aboutme div#container div#information div#buttons a#contact:hover {
+    color: #3498db;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+section#aboutme div#container div#information div#buttons a#cv {
+    width: 120px;
+    height: 34px;
+    border: 1px solid #3498db;
+    font-size: .8rem;
+    text-align: center;
+    line-height: 34px;
+    font-weight: 700;
+    color: #3498db;
+    text-transform: uppercase;
+    transition: color .3s ease, background-color .3s ease;
+    cursor: pointer;
+}
+
+section#aboutme div#container div#information div#buttons a#cv:hover {
+    color: #fff;
+    background-color: #3498db;
+}
+
+section#skills {
+    width: 100%;
+    height: 450px;
+    background-image: url('/img/bgskills.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+section#skills div#container {
+    width: 1200px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+}
+
+section#skills div#container i {
+    font-size: 40px;
+    color: #3498db;
+}
+
+section#skills div#container h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+section#skills div#container div.border {
+    margin: 10px 0 30px 0;
+    height: 1px;
+    background-image:  linear-gradient(90deg, #3498db 50%, rgba(255, 255, 255, .1) 0%);
+}
+
+section#skills div#container div#education {
+    width: 20%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+section#skills div#container h2 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+section#skills div#container h3 {
+    margin: 0 0 20px 0;
+    font-size: .95rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .6);
+}
+
+section#skills div#container h3:last-child {
+    margin: 0;
+}
+
+section#skills div#container div#awards {
+    width: 20%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+section#skills div#container div#skills {
+    width: 45%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+section#skills div#container div#skills h2 {
+    font-size: .8rem;
+    margin: 0;
+}
+
+section#skills div#container div#skills div.skillbar {
+    margin: 2px 0 10px 0;
+    width: 100%;
+    height: 2px;
+    font-size: .8rem;
+    background-image:  linear-gradient(90deg, #3498db 0%, rgba(255, 255, 255, .1) 0%);
+    text-align: right;
+}
+
+section#portfolio {
+    width: 100%;
+    min-height: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#portfolio div#container {
+    width: 1200px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+section#portfolio div#container h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: .8rem;
+    height: 100px;
+    color: rgba(255, 255, 255, .6);
+}
